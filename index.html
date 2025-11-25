@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARAGA Mochilas Personalizadas</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="recursos/logo blanco.png" alt="Logo KARAGA" />
+        </a>
+      </div>
+      
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="catalogo.html">CATÁLOGO</a></li>
+        <li><a href="personaliza.html">PERSONALIZA</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+  
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-left">
+        <img src="recursos/frontal.png" alt="Mochila personalizada" />
+      </div>
+      <div class="hero-right">
+        <h1>DISEÑA TU MOCHILA<br><span>LLEVA TU ESTILO CONTIGO</span></h1>
+        <a href="#personaliza" class="cta-button">¡EMPIEZA A PERSONALIZAR!</a>
+      </div>
+    </section>
+  </header>
+  
+  <section class="steps-section">
+    <h2>¿Cómo personalizar tu mochila?</h2>
+    <div class="steps-container">
+  
+      <!-- Paso 1 -->
+      <div class="step-card">
+        <img src="recursos/frontalb3.png" alt="Paso 1" />
+        <div class="step-overlay">Paso 1: Elige tu color principal</div>
+      </div>
+  
+      <!-- Paso 2 -->
+      <div class="step-card">
+        <img src="recursos/trio_de_mochilas-removebg-preview.png" alt="Paso 2" />
+        <div class="step-overlay">Paso 2: Selecciona los compartimientos</div>
+      </div>
+  
+      <!-- Paso 3 -->
+      <div class="step-card step-ajustada">
+        <img src="recursos/rediseña.png" alt="Paso 3" />
+        <div class="step-overlay">Paso 3: Carga tu diseño personalizado</div>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+
+  <div class="divider"></div>
+
+  <footer class="footer" id="contacto">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/59169447992" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="slogan">Hecho con estilo y calidad en Cercado Cochabamba</p>
+      <p class="copyright">© 2025 KARGA Mochilas Personalizadas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <!-- Botón del carrito -->
+<button id="cart-button" class="cart-button">🛒</button>
+
+<!-- Popover del carrito -->
+<div id="cart-popover" class="cart-popover hidden">
+  <div class="cart-content">
+    <span class="close-btn">&times;</span>
+
+    <div class="cart-sections">
+      <!-- Información del cliente -->
+      <div class="client-info">
+        <h2>Información de cliente</h2>
+        <input type="text" placeholder="Escribe tu nombre completo" />
+        <input type="text" placeholder="Dirección de envío" />
+        <input type="tel" placeholder="Teléfono" />
+        <input type="email" placeholder="Correo electrónico" />
+        <div class="payment-icons">
+          <img src="recursos/bnb.png" alt="BNB" />
+          <img src="recursos/tigo.png" alt="Tigo Money" />
+          <img src="qr.svg" alt="QR" />
+        </div>
+        <label>
+          <input type="checkbox" />
+          Acepto los términos y condiciones
+        </label>
+        <button class="buy-button">Comprar Ahora</button>
+      </div>
+
+      <!-- Descripción del producto -->
+      <div class="product-info">
+        <h2>Descripción del producto</h2>
+        <img src="recursos/frontalb2.png" alt="Mochila negra" />
+        <p><strong>Nombre:</strong> </p>
+        <p><strong>Color:</strong> color no seleccionado</p>
+        <p><strong>Precio:</strong> 00 Bs</p>
+        <p><strong>Cantidad:</strong> 1</p>
+        <p><strong>Subtotal:</strong> 00bs</p>
+        <p><strong>Total:</strong>00bs</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
