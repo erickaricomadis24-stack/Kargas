@@ -1,0 +1,410 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #000000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #6f6f6f;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #bdbdbd;
+}
+
+/* Hero*/
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-image: url("recursos/fondo\ \(1\).png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* oscurece el fondo para mejor contraste */
+  z-index: 0;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-right h1,
+.hero-right span {
+  color: white;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #6e6b6b;
+}
+
+
+/* Sección ¿Cómo funciona? */
+.como-funciona {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.como-funciona h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.step {
+  max-width: 300px;
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.step:hover {
+  transform: scale(1.03);
+}
+
+.step img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.step h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.step p {
+  margin-bottom: 1rem;
+}
+
+/* Línea de separación */
+.divider {
+  height: 4px;
+  background: linear-gradient(to right, #ff4d4d, #ffb347);
+  margin: 0;
+  border: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+
+.social-icons {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.slogan {
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.copyright {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .hero-right {
+    text-align: center;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Botón del carrito */
+.cart-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #9b9b9b;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Popover */
+.cart-popover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.cart-popover.hidden {
+  display: none;
+}
+
+.cart-content {
+  background: #fff;
+  width: 90%;
+  max-width: 900px;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.cart-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.client-info, .product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.client-info input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+.payment-icons img {
+  width: 40px;
+  margin: 0.5rem;
+}
+
+.buy-button {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.product-info img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #757575;
+}
+.steps-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fefefe;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.step-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.step-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.step-card:hover .step-overlay {
+  opacity: 1;
+}
+
+/* Ajuste específico para paso 3 si la imagen es más grande */
+.step-ajustada img {
+  object-position: center top;
+}

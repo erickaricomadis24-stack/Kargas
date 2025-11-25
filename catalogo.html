@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo - KARAGA Mochilas Personalizadas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="catalogo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="recursos/logo blanco.png" alt="Logo KARAGA" />
+      </a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="catalogo.html">CATÁLOGO</a></li>
+      <li><a href="personaliza.html">PERSONALIZA</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+  </nav>
+
+  <!-- CATÁLOGO -->
+  <section class="catalogo-section">
+    <h2>CATÁLOGO</h2>
+    <p class="subtitulo">¡Elige una!</p>
+    <div class="catalogo-grid">
+
+
+      
+      <div class="prototipo">
+        <div class="mochila-vista">
+          <img src="recursos/frontalb2.png" class="vista activa" />
+          <img src="recursos/lateralb2.png" class="vista" />
+          <img src="recursos/traserab2.png" class="vista" />
+        </div>
+        <h3>Prototipo 2</h3>
+        <p>Mochila blanca minimalista.</p>
+      </div>
+      
+      <div class="prototipo">
+        <div class="mochila-vista">
+          <img src="recursos/frontalb1.png" class="vista activa" />
+          <img src="recursos/lateralb1.png" class="vista" />
+          <img src="recursos/traserab1.png" class="vista" />
+        </div>
+        <h3>Prototipo 1</h3>
+        <p>Mochila negra con estilo urbano.</p>
+      </div>
+      
+      <div class="prototipo">
+        <div class="mochila-vista">
+          <img src="recursos/frontalb3.png" class="vista activa" />
+          <img src="recursos/lateralb3.png" class="vista" />
+          <img src="recursos/traserab3.png" class="vista" />
+        </div>
+        <h3>Prototipo 3</h3>
+        <p>Mochila gris versátil.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/59169447992" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="slogan">Hecho con estilo y calidad en Cercado Cochabamba</p>
+      <p class="copyright">© 2025 KARGA Mochilas Personalizadas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <div class="carrito-burbuja" onclick="abrirCarrito()" title="Ver carrito">
+    🛒
+  </div>
+  <script src="catalogo.js"></script>
+</body>
+</html>

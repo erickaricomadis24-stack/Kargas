@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personaliza tu Mochila | KARAGA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="personaliza.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="recursos/logo blanco.png" alt="Logo KARAGA" />
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="catalogo.html">CATÁLOGO</a></li>
+        <li><a href="personaliza.html">PERSONALIZA</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- Sección de personalización -->
+  <main class="personaliza-main">
+    
+    <!-- Formulario -->
+    <section class="personaliza-formulario">
+      <h2>Personaliza tu Mochila</h2>
+      <form class="formulario-personalizacion">
+        
+        <label for="color-principal">Color principal:</label>
+        <input type="color" id="color-principal" name="color-principal" value="#000000" />
+
+        <label for="color-cierres">Color de cierres:</label>
+        <input type="color" id="color-cierres" name="color-cierres" value="#ffffff" />
+
+        <label for="compartimientos">Número de compartimientos:</label>
+        <select id="compartimientos" name="compartimientos">
+          <option value="1">1 compartimiento</option>
+          <option value="2">2 compartimientos</option>
+          <option value="3">3 compartimientos</option>
+          <option value="4">4 compartimientos</option>
+        </select>
+
+        <label for="diseño">Carga tu diseño personalizado:</label>
+        <input type="file" id="diseño" name="diseño" accept="image/*" />
+
+        <!-- Vista previa con imagen real -->
+        <div class="preview-mochila">
+          <div class="mochila-container">
+            <!-- Imagen base de mochila blanca -->
+            <img src="recursos/frontalb1.png" alt="Mochila base" class="mochila-base" />
+            
+            <!-- Capa de color superpuesta -->
+            <div id="colorOverlay" class="mochila-overlay"></div>
+          </div>
+        </div>
+        
+        
+
+        <button type="submit" class="buy-button">Agregar al carrito</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/59169447992" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="slogan">Hecho con estilo y calidad en Cercado Cochabamba</p>
+      <p class="copyright">© 2025 KARGA Mochilas Personalizadas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para aplicar color dinámico -->
+  <script>
+    const colorInput = document.getElementById('color-principal');
+    const overlay = document.getElementById('colorOverlay');
+  
+    function actualizarColor() {
+      overlay.style.backgroundColor = colorInput.value;
+    }
+  
+    colorInput.addEventListener('input', actualizarColor);
+    actualizarColor(); // inicializa con el valor por defecto
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | KARAGA Mochilas Personalizadas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contacto.CSS">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="recursos/logo blanco.png" alt="Logo KARAGA" />
+        </a>
+      </div>
+      
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="catalogo.html">CATÁLOGO</a></li>
+        <li><a href="personaliza.html">PERSONALIZA</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Formulario de contacto -->
+  <main class="contacto-main">
+    <section class="formulario-contacto">
+      <h1>CONTACTO</h1>
+      <form class="contacto-form">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
+
+        <label for="telefono">Número de teléfono (Opcional):</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+591..." />
+
+        <label for="mensaje">Escriba su mensaje aquí:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+
+        <button type="submit" class="buy-button">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/59169447992" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p class="slogan">Hecho con estilo y calidad en Cercado Cochabamba</p>
+      <p class="copyright">© 2025 KARGA Mochilas Personalizadas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="nav-bar.js"></script>
+</body>
+</html>
